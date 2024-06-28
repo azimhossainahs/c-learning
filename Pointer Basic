@@ -1,0 +1,24 @@
+#include <stdio.h>  // Include the standard input/output header file.
+
+void main(){
+    int myAge = 43;
+
+    printf("myAge =%d\n",myAge);
+    printf("Memory address of  myAge is :%p\n", &myAge);
+    int* ptr = &myAge;
+
+    printf("%p\n",ptr);
+    printf("%p\n",&myAge);
+
+     printf("show value using pointer:%d\n",*ptr);
+    printf("Pointers memory address :%p",*ptr);//this shows the pointer memory address
+                       //output
+/*myAge =43
+Memory address of  myAge is :0061FF18
+0061FF18
+0061FF18
+show value using pointer:43
+Pointers memory address :0000002B
+*/
+    getch();
+}
