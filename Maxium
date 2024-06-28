@@ -1,0 +1,23 @@
+#include <stdio.h>
+max/min
+void main(){
+    int num[100];
+    int n;
+    printf("how many number will input:");
+    scanf("%d",&n);
+
+    for(int i=0;i<n;i++){
+        scanf("%d",&num[i]);
+    }
+    //Find Max
+    int max = num[0];
+    for(int i=1;i<n;i++){
+            if(num[i] > max){//for min condition will change [num[i] < max]
+                max =num[i];
+            }
+        }
+    printf("Max = %d",max);
+
+
+    getch();
+}
