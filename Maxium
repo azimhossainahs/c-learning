@@ -1,5 +1,5 @@
 #include <stdio.h>
-max/min
+
 void main(){
     int num[100];
     int n;
