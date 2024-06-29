@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+void main(){
+    int arr1[10][10],arr2[10][10],sum[10][10];
+    int rows, cols;
+    printf("Enter number of rows and col : ");
+    scanf("%d %d",&rows ,&cols);
+            //get arr1 input
+        for(int i=0;i<rows;i++){
+
+              for(int j=0;j<cols;j++){
+                printf("arr1[%d][%d]: ",i ,j);
+                scanf("%d",&arr1[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\nArray 2:\n");
+        for(int i=0;i<rows;i++){
+
+              for(int j=0;j<cols;j++){
+                printf("arr2[%d][%d]: ",i ,j);
+                scanf("%d",&arr2[i][j]);
+            }
+            printf("\n");
+        }
+
+
+        //output of 2D array1
+        printf("array1 :\n");
+        for(int i=0;i<rows;i++){
+                printf("\tRow %d: ",i);
+            for(int j=0;j<cols;j++){
+                printf("%d ",arr1[i][j]);
+            }
+            printf("\n");
+        }
+
+        printf("array2 :\n");
+        for(int i=0;i<rows;i++){
+                printf("\tRow %d: ",i);
+            for(int j=0;j<cols;j++){
+                printf("%d ",arr2[i][j]);
+            }
+            printf("\n");
+        }
+
+        //summation
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                sum[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+
+        //sum array print
+        printf("arr1 + arr2 :\n");
+        for(int i=0;i<rows;i++){
+                printf("\tRow %d: ",i);
+            for(int j=0;j<cols;j++){
+                printf("%d ",sum[i][j]);
+            }
+            printf("\n");
+        }
+
+
+    getchar();
+}
