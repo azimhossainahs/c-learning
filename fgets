@@ -1,0 +1,17 @@
+#include <stdio.h>
+void main(){
+    char name[50];
+
+
+    printf("enter a name: ");
+    //char input
+    fgets(name, sizeof(name), stdin);
+    size_t len = strlen(name);
+    //cut new line throw condition
+    if(name[len - 1] ='\n'){
+        name[len - 1] ='\0';
+    }
+    printf("Hello ");
+    puts(name);//output
+    getch();
+}
