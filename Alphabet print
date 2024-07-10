@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <conio.h>
+
+void alphabet(char start, char end) {
+    if ((start >= 'a' && end <= 'z') || (start >= 'A' && end <= 'Z')) {
+        for (char st = start; st <= end; st++) {
+            printf("%c ", st);
+        }
+        printf("\n");
+    } else {
+        printf("Error: You passed wrong values. Please enter characters in range (a-z) or (A-Z).\n");
+    }
+}
+
+int main() {
+    char start, end;
+    char buffer[2]; // Buffer to read end as a string
+
+    printf("----------------------------------AlPHABET Writer------------------------\n");
+    again:
+    printf("Enter two characters: ");
+    scanf(" %c %s", &start, &buffer);
+
+    if (buffer[1] != '\0') {
+        printf("Invalid input. Please enter exactly one character for end.\n");
+        goto again;
+    }
+
+    end = buffer[0];
+
+    if (!((start >= 'a' && end <= 'z') || (start >= 'A' && end <= 'Z'))) {
+        printf("Invalid input. Please enter characters in range (a-z) or (A-Z): ");
+        goto again;
+    }
+
+    printf("Printing alphabet from '%c' to '%c':\n", start, end);
+    alphabet(start, end);
+
+    getch();
+    }
